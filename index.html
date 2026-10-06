@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GE10A Core English - Mid-term Grammar Practice</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #7c3aed;
+            --primary-hover: #6d28d9;
+            --primary-light: #f5f3ff;
+            --secondary: #ff758c;
+            --bg-gradient-1: #6366f1;
+            --bg-gradient-2: #a855f7;
+            --card-bg: #ffffff;
+            --text-main: #1e1b4b;
+            --text-light: #64748b;
+            --border-color: #e2e8f0;
+            --success: #10b981;
+            --error: #ef4444;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(135deg, var(--bg-gradient-1) 0%, var(--bg-gradient-2) 100%);
+            color: var(--text-main);
+            margin: 0;
+            padding: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        @media (min-width: 768px) {
+            body { padding: 30px 20px; }
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: 1100px;
+            background: var(--card-bg);
+            border-radius: 24px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+            padding: 20px 16px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in-out;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .main-container { border-radius: 28px; padding: 35px 45px; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-weight: 800;
+            font-size: 17px;
+            color: var(--primary);
+            text-decoration: none;
+            cursor: pointer;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .logo-area { font-size: 22px; margin: 0; }
+        }
+
+        .logo-icon {
+            background: var(--primary-light);
+            color: var(--primary);
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            font-size: 18px;
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15);
+        }
+
+        .meta-badges {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .meta-badges { width: auto; }
+        }
+
+        .badge {
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            border: 1px solid rgba(124, 58, 237, 0.15);
+        }
+
+        .badge-btn {
+            background: var(--primary-light);
+            color: var(--primary);
+            border: 1px solid rgba(124, 58, 237, 0.15);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .badge-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);
+        }
+
+        .hero-section {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .hero-section h1 {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary);
+            margin: 8px 0 10px 0;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-section p {
+            color: var(--text-light);
+            font-size: 14px;
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        @media (min-width: 768px) {
+            .cards-grid {
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                gap: 25px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .selection-card {
+            background: #ffffff;
+            border: 2px solid var(--border-color);
+            border-radius: 18px;
+            padding: 20px 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .selection-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(124, 58, 237, 0.12);
+        }
+
+        .card-icon-wrap {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px auto;
+            font-size: 26px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+            background: var(--primary-light);
+            color: var(--primary);
+        }
+
+        .selection-card h3 {
+            font-size: 19px;
+            font-weight: 800;
+            margin: 0 0 8px 0;
+            color: var(--text-main);
+        }
+
+        .selection-card p {
+            color: var(--text-light);
+            font-size: 13px;
+            line-height: 1.5;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .exercise-wrapper {
+            background: #fafafa;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 15px 12px;
+            margin-top: 12px;
+            max-height: 580px;
+            overflow-y: auto;
+            text-align: left;
+        }
+
+        @media (min-width: 768px) {
+            .exercise-wrapper {
+                border-radius: 20px;
+                padding: 30px;
+                margin-top: 15px;
+                max-height: 620px;
+            }
+        }
+
+        .question-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 16px 14px;
+            margin-bottom: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+            text-align: left;
+        }
+
+        .question-text {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.6;
+            color: var(--text-main);
+        }
+
+        @media (min-width: 768px) {
+            .question-text { font-size: 17px; }
+        }
+
+        select.exercise-select {
+            border: 2px solid var(--primary);
+            padding: 6px 10px;
+            font-size: 14px;
+            font-weight: 700;
+            outline: none;
+            background: var(--primary-light);
+            border-radius: 8px;
+            color: var(--primary);
+            margin: 4px 2px;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(124, 58, 237, 0.1);
+            max-width: 100%;
+        }
+
+        input.exercise-input {
+            border: 2px solid var(--primary);
+            padding: 8px 12px;
+            font-size: 14px;
+            font-weight: 700;
+            outline: none;
+            background: var(--primary-light);
+            border-radius: 8px;
+            color: var(--primary);
+            margin: 6px 0 4px 0;
+            width: 100%;
+            box-sizing: border-box;
+            box-shadow: 0 2px 6px rgba(124, 58, 237, 0.1);
+        }
+
+        @media (min-width: 768px) {
+            input.exercise-input { width: 380px; }
+        }
+
+        .mcq-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .mcq-option-btn {
+            background: #f8fafc;
+            border: 2px solid var(--border-color);
+            padding: 10px 14px;
+            border-radius: 10px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text-main);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .mcq-option-btn:hover {
+            border-color: var(--primary);
+            background: var(--primary-light);
+        }
+
+        .mcq-option-btn.selected {
+            background: var(--primary-light);
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .mcq-option-btn.selected-correct {
+            background: #d1fae5 !important;
+            border-color: var(--success) !important;
+            color: #065f46 !important;
+        }
+
+        .mcq-option-btn.selected-incorrect {
+            background: #fee2e2 !important;
+            border-color: var(--error) !important;
+            color: #991b1b !important;
+        }
+
+        .sample-box {
+            background: #f5f3ff;
+            border-left: 4px solid var(--primary);
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            font-size: 13px;
+            color: #31106e;
+            font-weight: 500;
+            text-align: left;
+            line-height: 1.5;
+        }
+
+        .feedback-text {
+            font-size: 13px;
+            font-weight: 700;
+            margin-top: 8px;
+            line-height: 1.5;
+        }
+
+        @media (min-width: 768px) {
+            .feedback-text { font-size: 15px; margin-top: 10px; }
+        }
+
+        .correct-fb { color: var(--success); }
+        .incorrect-fb { color: var(--error); }
+
+        .score-banner {
+            background: var(--primary-light);
+            border: 2px dashed var(--primary);
+            color: var(--primary);
+            padding: 14px;
+            border-radius: 14px;
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 18px;
+            display: none;
+            text-align: center;
+        }
+
+        .submit-btn-wrap {
+            text-align: center;
+            margin: 25px 0 10px 0;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 14px;
+            font-size: 16px;
+            font-weight: 800;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(124, 58, 237, 0.25);
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--border-color);
+            color: var(--text-main);
+            padding: 10px 16px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 700;
+            transition: all 0.2s;
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .btn-secondary { width: auto; padding: 10px 20px; font-size: 15px; }
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: var(--primary-light);
+        }
+
+        .hidden { display: none !important; }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+    
+    <!-- Top Navigation Header -->
+    <div class="top-nav">
+        <a class="logo-area" onclick="navigateTo('main')">
+            <div class="logo-icon">🚀</div>
+            <span>GE10A Core English</span>
+        </a>
+        <div class="meta-badges">
+            <div class="badge">🏫 PSIS Level: GE10A</div>
+            <div class="badge">📖 Core Grammar</div>
+            <button class="badge-btn" onclick="navigateTo('main')">🏠 Main Menu</button>
+        </div>
+    </div>
+
+    <!-- MAIN MENU -->
+    <div id="screen-main" class="screen">
+        <div class="hero-section">
+            <h1 style="font-size: 26px;">GE10A Mid-term Grammar Practice</h1>
+            <p>Select your lesson below. Every question includes clear step-by-step guidance and detailed grammatical explanations!</p>
+        </div>
+
+        <div class="cards-grid" id="unit-cards-grid"></div>
+    </div>
+
+    <!-- EXERCISE VIEW -->
+    <div id="screen-exercise" class="screen hidden">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 10px;">
+            <h3 id="exercise-screen-title" style="margin:0; color: var(--primary); font-size: 18px;">Exercises</h3>
+            <button class="btn-secondary" onclick="navigateTo('main')">← Back to Main Menu</button>
+        </div>
+
+        <div id="score-banner" class="score-banner"></div>
+
+        <div class="exercise-wrapper" id="exercise-questions-container"></div>
+    </div>
+
+</div>
+
+<script>
+    const grammarDatabase = [
+        {
+            id: "lesson1",
+            name: "Lesson 1: Unit 7A – Passive of Present Continuous, Present Perfect, and Future (20 Items)",
+            desc: "Practice passive forms without agents.",
+            exercises: [
+                {
+                    type: "mcq",
+                    title: "Exercise A: Choose the Best Passive Form",
+                    instruction: "Instruction: Read the time expression or context clue in the sentence (e.g., 'tomorrow', 'currently', 'recently') to pick the correct passive tense.",
+                    sample: { 
+                        q: "Sample: The old textbooks have been replaced / are being replaced / will be replaced by tablets next semester.", 
+                        answer: "will be replaced", 
+                        explanation: "💡 <strong>Why?</strong> The time marker <em>'next semester'</em> clearly points to the future. Future passive uses <strong>will be + past participle</strong>." 
+                    },
+                    questions: [
+                        { q: "1. The wood has been turned / will be turned / is being turned into coal tomorrow.", options: ["has been turned", "will be turned", "is being turned"], ans: "will be turned", explanation: "💡 <strong>Explanation:</strong> The time marker <em>'tomorrow'</em> indicates a future event. Future passive requires <strong>will be + past participle</strong>." },
+                        { q: "2. Currently, the new computer system has been tested / is being tested / will be tested by the technicians.", options: ["has been tested", "is being tested", "will be tested"], ans: "is being tested", explanation: "💡 <strong>Explanation:</strong> The word <em>'Currently'</em> shows an action happening right now. Present continuous passive uses <strong>is/are being + past participle</strong>." },
+                        { q: "3. Thousands of computers are being infected / have already been infected / will be infected by the virus.", options: ["are being infected", "have already been infected", "will be infected"], ans: "have already been infected", explanation: "💡 <strong>Explanation:</strong> The adverb <em>'already'</em> indicates a completed action with present relevance. Present perfect passive uses <strong>have/has been + past participle</strong>." },
+                        { q: "4. In the coming years, more educational apps are being developed / have been developed / will be developed for students.", options: ["are being developed", "have been developed", "will be developed"], ans: "will be developed", explanation: "💡 <strong>Explanation:</strong> The phrase <em>'In the coming years'</em> looks ahead to the future. Future passive requires <strong>will be + past participle</strong>." },
+                        { q: "5. The new software is being installed / has been installed / will be installed right now.", options: ["is being installed", "has been installed", "will be installed"], ans: "is being installed", explanation: "💡 <strong>Explanation:</strong> The phrase <em>'right now'</em> highlights an ongoing process. Present continuous passive uses <strong>is being + past participle</strong>." },
+                        { q: "6. Recently, several social networking sites are being used / have been used / will be used in criminal investigations.", options: ["are being used", "have been used", "will be used"], ans: "have been used", explanation: "💡 <strong>Explanation:</strong> The time word <em>'Recently'</em> signals the present perfect tense. Form: <strong>have been + past participle</strong>." },
+                        { q: "7. Next month, more online courses have been offered / are being offered / will be offered to students.", options: ["have been offered", "are being offered", "will be offered"], ans: "will be offered", explanation: "💡 <strong>Explanation:</strong> The marker <em>'Next month'</em> points forward in time, requiring the future passive <strong>will be + past participle</strong>." },
+                        { q: "8. These days, more videos are being posted / have been posted / will be posted to the Internet.", options: ["are being posted", "have been posted", "will be posted"], ans: "are being posted", explanation: "💡 <strong>Explanation:</strong> The phrase <em>'These days'</em> indicates an ongoing current trend. Present continuous passive uses <strong>are being + past participle</strong>." },
+                        { q: "9. The old computers will be replaced / have been replaced / are being replaced next week.", options: ["will be replaced", "have been replaced", "are being replaced"], ans: "will be replaced", explanation: "💡 <strong>Explanation:</strong> The future time marker <em>'next week'</em> requires <strong>will be + past participle</strong>." },
+                        { q: "10. More and more data has been stored / is being stored / will be stored in the cloud in the future.", options: ["has been stored", "is being stored", "will be stored"], ans: "will be stored", explanation: "💡 <strong>Explanation:</strong> The phrase <em>'in the future'</em> explicitly signals future time, requiring <strong>will be + past participle</strong>." }
+                    ]
+                },
+                {
+                    type: "writing",
+                    title: "Exercise B: Change Active to Passive Voice (DO NOT include the agent)",
+                    instruction: "Instruction: Move the object of the active sentence to the front as the new subject and change the verb into passive form. ⚠️ NOTE: DO NOT include the agent (e.g., do NOT write 'by technicians' or 'by hackers'). Keep your answers focused solely on the recipient and the passive action.",
+                    sample: { 
+                        q: "Sample: Active: Technicians are updating the network system.", 
+                        answer: "The network system is being updated", 
+                        explanation: "💡 <strong>Why?</strong> Active 'are updating' becomes passive <strong>'is being updated'</strong>. Note that the agent 'by technicians' is omitted." 
+                    },
+                    questions: [
+                        { q: "1. Companies are developing new smartphones.", acceptable: ["new smartphones are being developed"], explanation: "💡 <strong>Explanation:</strong> Present continuous passive (<em>are being developed</em>) without the agent." },
+                        { q: "2. Hackers have infected thousands of computers.", acceptable: ["thousands of computers have been infected"], explanation: "💡 <strong>Explanation:</strong> Present perfect passive (<em>have been infected</em>) without the agent." },
+                        { q: "3. People are using the cloud for many different purposes.", acceptable: ["the cloud is being used for many different purposes"], explanation: "💡 <strong>Explanation:</strong> Present continuous passive (<em>is being used</em>) without the agent." },
+                        { q: "4. Scientists will develop more advanced technology.", acceptable: ["more advanced technology will be developed"], explanation: "💡 <strong>Explanation:</strong> Future passive (<em>will be developed</em>) without the agent." },
+                        { q: "5. The company is going to create a new website.", acceptable: ["a new website is going to be created"], explanation: "💡 <strong>Explanation:</strong> Future 'going to' passive without the agent." },
+                        { q: "6. Experts have created several sophisticated viruses.", acceptable: ["several sophisticated viruses have been created"], explanation: "💡 <strong>Explanation:</strong> Present perfect passive without the agent." },
+                        { q: "7. Teachers are using educational computer games.", acceptable: ["educational computer games are being used"], explanation: "💡 <strong>Explanation:</strong> Present continuous passive without the agent." },
+                        { q: "8. The company will make Wi-Fi available in more public places.", acceptable: ["wi-fi will be made available in more public places"], explanation: "💡 <strong>Explanation:</strong> Future passive without the agent." },
+                        { q: "9. Technicians are testing the new computer system.", acceptable: ["the new computer system is being tested"], explanation: "💡 <strong>Explanation:</strong> Present continuous passive without the agent." },
+                        { q: "10. The school is going to offer more online courses next year.", acceptable: ["more online courses are going to be offered next year"], explanation: "💡 <strong>Explanation:</strong> Future 'going to' passive without the agent." }
+                    ]
+                }
+            ]
+        },
+        {
+            id: "lesson2",
+            name: "Lesson 2: Unit 7B – Negative Questions and Tag Questions (30 Items)",
+            desc: "Practice negative questions and tag questions for giving opinions.",
+            exercises: [
+                {
+                    type: "writing",
+                    title: "Exercise 1: Turn Statements into Negative Questions",
+                    instruction: "Instruction: Start with the negated auxiliary matching the original verb tense (e.g., Is -> Isn't; Was -> Wasn't; Should -> Shouldn't; Past Action -> Didn't).",
+                    sample: { 
+                        q: "Sample: It is frustrating when the Wi-Fi stops working during class.", 
+                        answer: "Isn't it frustrating when the Wi-Fi stops working during class", 
+                        explanation: "💡 <strong>Why?</strong> The verb 'is' in present simple becomes <strong>'Isn't it'</strong> to express a strong opinion." 
+                    },
+                    questions: [
+                        { q: "1. It was awful how much paper we wasted on fliers that nobody read.", acceptable: ["wasn't it awful how much paper we wasted on fliers that nobody read"], explanation: "💡 <strong>Explanation:</strong> Past tense 'was' becomes negative <strong>'Wasn't it awful...'</strong>." },
+                        { q: "2. Jill should have kept her text messages much shorter.", acceptable: ["shouldn't jill have kept her text messages much shorter"], explanation: "💡 <strong>Explanation:</strong> Modal 'should' becomes negative <strong>'Shouldn't Jill have...'</strong>." },
+                        { q: "3. It was weird how those pop-up ads made my computer freeze.", acceptable: ["wasn't it weird how those pop-up ads made my computer freeze"], explanation: "💡 <strong>Explanation:</strong> Past tense 'was' becomes <strong>'Wasn't it weird...'</strong>." },
+                        { q: "4. It seemed like we spent all day looking for an Internet café.", acceptable: ["didn't it seem like we spent all day looking for an internet café", "didn't it seem like we spent all day looking for an internet cafe"], explanation: "💡 <strong>Explanation:</strong> Past simple verb 'seemed' takes auxiliary 'did', making it <strong>'Didn't it seem...'</strong>." },
+                        { q: "5. It would have been great if we could have paid less for our computer.", acceptable: ["wouldn't it have been great if we could have paid less for our computer"], explanation: "💡 <strong>Explanation:</strong> Modal 'would' becomes <strong>'Wouldn't it have been...'</strong>." },
+                        { q: "6. We should have spent less time playing video games as kids.", acceptable: ["shouldn't we have spent less time playing video games as kids"], explanation: "💡 <strong>Explanation:</strong> Modal 'should' becomes <strong>'Shouldn't we have...'</strong>." },
+                        { q: "7. It was sad how Mark got really addicted to social networking sites.", acceptable: ["wasn't it sad how mark got really addicted to social networking sites"], explanation: "💡 <strong>Explanation:</strong> Past tense 'was' becomes <strong>'Wasn't it sad...'</strong>." },
+                        { q: "8. It is annoying how often telemarketers call.", acceptable: ["isn't it annoying how often telemarketers call"], explanation: "💡 <strong>Explanation:</strong> Present tense 'is' becomes <strong>'Isn't it annoying...'</strong>." },
+                        { q: "9. They should get rid of those banners on the Internet.", acceptable: ["shouldn't they get rid of those banners on the internet"], explanation: "💡 <strong>Explanation:</strong> Modal 'should' becomes <strong>'Shouldn't they get rid...'</strong>." },
+                        { q: "10. There are too many channels on TV these days.", acceptable: ["aren't there too many channels on tv these days"], explanation: "💡 <strong>Explanation:</strong> 'There are' becomes <strong>'Aren't there...'</strong>." }
+                    ]
+                },
+                {
+                    type: "writing",
+                    title: "Exercise 2: Complete with Question Tags",
+                    instruction: "Instruction: Write the correct auxiliary tag at the end. Rule: Positive statement takes negative tag; negative statement (or words like nobody/nothing/rarely) takes positive tag.",
+                    sample: { 
+                        q: "Sample: The computer lab was closed early yesterday, [...]", 
+                        answer: "wasn't it", 
+                        explanation: "💡 <strong>Why?</strong> The statement 'was closed' is positive, so the tag uses the negative form <strong>'wasn't it'</strong>." 
+                    },
+                    questions: [
+                        { q: "1. There haven't been any new rules about using social media at work, [...]", acceptable: ["have there"], explanation: "💡 <strong>Explanation:</strong> The statement is negative (<em>haven't been</em>), so it requires a positive tag <strong>'have there'</strong>." },
+                        { q: "2. Someone told him there was a problem with his phone, [...]", acceptable: ["didn't they"], explanation: "💡 <strong>Explanation:</strong> Past tense verb 'told' takes auxiliary 'did', with pronoun 'they' for someone." },
+                        { q: "3. You gave your computer password to someone, [...]", acceptable: ["didn't you"], explanation: "💡 <strong>Explanation:</strong> Past simple positive verb 'gave' takes negative tag <strong>'didn't you'</strong>." },
+                        { q: "4. There was nothing he could do with his obsolete computer, [...]", acceptable: ["was there"], explanation: "💡 <strong>Explanation:</strong> The word <em>'nothing'</em> makes the clause negative, so the tag must be positive <strong>'was there'</strong>." },
+                        { q: "5. Nobody we know ever actually clicked on those banner ads, [...]", acceptable: ["did they"], explanation: "💡 <strong>Explanation:</strong> The pronoun <em>'Nobody'</em> makes the statement negative, taking the positive plural tag <strong>'did they'</strong>." },
+                        { q: "6. She had already complained about the telemarketers, [...]", acceptable: ["hadn't she"], explanation: "💡 <strong>Explanation:</strong> Past perfect positive 'had already complained' takes negative tag <strong>'hadn't she'</strong>." },
+                        { q: "7. You used to have a robot vacuum that constantly cleaned the house, [...]", acceptable: ["didn't you"], explanation: "💡 <strong>Explanation:</strong> 'Used to' takes auxiliary 'did', making the tag <strong>'didn't you'</strong>." },
+                        { q: "8. The movie was boring, [...]", acceptable: ["wasn't it"], explanation: "💡 <strong>Explanation:</strong> Positive past verb 'was' takes negative tag <strong>'wasn't it'</strong>." },
+                        { q: "9. She likes social media, [...]", acceptable: ["doesn't she"], explanation: "💡 <strong>Explanation:</strong> Present simple positive verb 'likes' takes negative tag <strong>'doesn't she'</strong>." },
+                        { q: "10. Everyone was there, [...]", acceptable: ["weren't they"], explanation: "💡 <strong>Explanation:</strong> Indefinite pronoun 'Everyone' takes plural pronoun 'they' and tag <strong>'weren't they'</strong>." }
+                    ]
+                },
+                {
+                    type: "writing",
+                    title: "Exercise 3: Negative Questions for Opinions",
+                    instruction: "Instruction: Transform the statement into a negative question (e.g., 'Students spend...' -> 'Don't students spend...').",
+                    sample: { 
+                        q: "Sample: Students spend too much time scrolling through short videos.", 
+                        answer: "Don't students spend too much time scrolling through short videos", 
+                        explanation: "💡 <strong>Why?</strong> Present simple verb 'spend' takes auxiliary 'Don't' + subject + verb." 
+                    },
+                    questions: [
+                        { q: "1. It's annoying how often telemarketers call.", acceptable: ["isn't it annoying how often telemarketers call"], explanation: "💡 <strong>Explanation:</strong> 'It is' converts to <strong>'Isn\'t it annoying...'</strong>." },
+                        { q: "2. They should get rid of those banners on the Internet.", acceptable: ["shouldn't they get rid of those banners on the internet"], explanation: "💡 <strong>Explanation:</strong> Modal 'should' converts to <strong>'Shouldn\'t they get rid...'</strong>." },
+                        { q: "3. It would be great if there were fewer billboards.", acceptable: ["wouldn't it be great if there were fewer billboards"], explanation: "💡 <strong>Explanation:</strong> Modal 'would' converts to <strong>'Wouldn\'t it be great...'</strong>." },
+                        { q: "4. It seems like a lot of people are texting while driving.", acceptable: ["doesn't it seem like a lot of people are texting while driving"], explanation: "💡 <strong>Explanation:</strong> Present simple 'seems' takes 'Doesn\'t', making <strong>'Doesn\'t it seem...'</strong>." },
+                        { q: "5. It's sad when people are tricked into losing money by spam messages.", acceptable: ["isn't it sad when people are tricked into losing money by spam messages"], explanation: "💡 <strong>Explanation:</strong> 'It is' converts to <strong>'Isn\'t it sad...'</strong>." },
+                        { q: "6. There are too many channels on TV these days.", acceptable: ["aren't there too many channels on tv these days"], explanation: "💡 <strong>Explanation:</strong> 'There are' converts to <strong>'Aren\'t there...'</strong>." },
+                        { q: "7. It's strange how some people use mobile devices constantly.", acceptable: ["isn't it strange how some people use mobile devices constantly"], explanation: "💡 <strong>Explanation:</strong> 'It is' converts to <strong>'Isn\'t it strange...'</strong>." },
+                        { q: "8. These apps are useful.", acceptable: ["aren't these apps useful"], explanation: "💡 <strong>Explanation:</strong> 'These apps are' converts to <strong>'Aren\'t these apps useful'</strong>." },
+                        { q: "9. Kids spend too much time playing video games.", acceptable: ["don't kids spend too much time playing video games"], explanation: "💡 <strong>Explanation:</strong> Present simple 'spend' takes <strong>'Don\'t kids spend...'</strong>." },
+                        { q: "10. People spend too much time online.", acceptable: ["don't people spend too much time online"], explanation: "💡 <strong>Explanation:</strong> Present simple 'spend' takes <strong>'Don\'t people spend...'</strong>." }
+                    ]
+                }
+            ]
+        },
+        {
+            id: "lesson3",
+            name: "Lesson 3: Unit 8A – Reduced Relative Clauses (10 Items)",
+            desc: "Practice shortening relative clauses by dropping pronouns and auxiliary verbs.",
+            exercises: [
+                {
+                    type: "writing",
+                    title: "Exercise: Rewrite Using Reduced Relative Clauses",
+                    instruction: "Instruction: Omit the relative pronoun (who/which/that) and any form of 'to be' (is/are/was/were), or change active verbs into present participles (-ing).",
+                    sample: { 
+                        q: "Sample: Anyone who wants to join the club must register by Friday.", 
+                        answer: "Anyone wanting to join the club must register by Friday", 
+                        explanation: "💡 <strong>Why?</strong> Active verb 'wants' is reduced to the present participle <strong>'wanting'</strong>." 
+                    },
+                    questions: [
+                        { q: "1. The photographer who lives upstairs has won many awards for his creativity.", acceptable: ["the photographer living upstairs has won many awards for his creativity"], explanation: "💡 <strong>Explanation:</strong> Active verb 'who lives' is reduced to present participle <strong>'living'</strong>." },
+                        { q: "2. Anyone who wants to be an actor needs both talent and luck.", acceptable: ["anyone wanting to be an actor needs both talent and luck"], explanation: "💡 <strong>Explanation:</strong> Active verb 'who wants' is reduced to <strong>'wanting'</strong>." },
+                        { q: "3. Professional cooking, which is considered a tough business, requires both patience and skill.", acceptable: ["professional cooking considered a tough business requires both patience and skill"], explanation: "💡 <strong>Explanation:</strong> Passive clause 'which is considered' is reduced to past participle <strong>'considered'</strong>." },
+                        { q: "4. A person who works as a comedian is always looking for new ways to make people laugh.", acceptable: ["a person working as a comedian is always looking for new ways to make people laugh"], explanation: "💡 <strong>Explanation:</strong> Active verb 'who works' is reduced to <strong>'working'</strong>." },
+                        { q: "5. Movie stars who are constantly hounded by the press deserve more privacy.", acceptable: ["movie stars constantly hounded by the press deserve more privacy"], explanation: "💡 <strong>Explanation:</strong> Passive clause 'who are hounded' is reduced to <strong>'hounded'</strong>." },
+                        { q: "6. People who are clever enough to get inside the mind of a criminal would make good detectives.", acceptable: ["people clever enough to get inside the mind of a criminal would make good detectives"], explanation: "💡 <strong>Explanation:</strong> 'who are' is omitted entirely, leaving the adjective phrase directly." },
+                        { q: "7. Roger Federer, who is ranked among the world's best tennis players, is considered very disciplined.", acceptable: ["roger Federer ranked among the world's best tennis players is considered very disciplined"], explanation: "💡 <strong>Explanation:</strong> Passive clause 'who is ranked' is reduced to <strong>'ranked'</strong>." },
+                        { q: "8. Anyone who dreams of becoming a champion athlete has to be prepared to do a lot of hard work.", acceptable: ["anyone dreaming of becoming a champion athlete has to be prepared to do a lot of hard work"], explanation: "💡 <strong>Explanation:</strong> Active verb 'who dreams' is reduced to <strong>'dreaming'</strong>." },
+                        { q: "9. The Summer Olympics, which are held every four years, are broadcast around the world.", acceptable: ["the summer olympics held every four years are broadcast around the world"], explanation: "💡 <strong>Explanation:</strong> Passive clause 'which are held' is reduced to <strong>'held'</strong>." },
+                        { q: "10. Someone who is interested in the latest music trends might be a good DJ.", acceptable: ["someone interested in the latest music trends might be a good DJ"], explanation: "💡 <strong>Explanation:</strong> 'who is' is omitted, leaving adjective <strong>'interested'</strong>." }
+                    ]
+                }
+            ]
+        },
+        {
+            id: "lesson4",
+            name: "Lesson 4: Unit 8B – Comment Clause with Which (10 Items)",
+            desc: "Practice non-defining comment clauses with 'which' to combine sentences.",
+            exercises: [
+                {
+                    type: "writing",
+                    title: "Exercise 1: Combine Sentences Using Which",
+                    instruction: "Instruction: Combine two sentences into one by replacing the second sentence's subject (This/It) with a comma and 'which'.",
+                    sample: { 
+                        q: "Sample: He missed the morning bus. This caused him to arrive late.", 
+                        answer: "He missed the morning bus, which caused him to arrive late", 
+                        explanation: "💡 <strong>Why?</strong> Replace 'This' with <strong>', which'</strong> to connect the action and result." 
+                    },
+                    questions: [
+                        { q: "1. She passed the exam. It was great.", acceptable: ["she passed the exam which was great"], explanation: "💡 <strong>Explanation:</strong> Replace 'It' with <strong>'which'</strong>." },
+                        { q: "2. He forgot his passport. This meant he couldn't travel.", acceptable: ["he forgot his passport which meant he couldn't travel"], explanation: "💡 <strong>Explanation:</strong> Replace 'This' with <strong>'which'</strong>." },
+                        { q: "3. She won the competition. This made her parents very proud.", acceptable: ["she won the competition which made her parents very proud"], explanation: "💡 <strong>Explanation:</strong> Replace 'This' with <strong>'which'</strong>." },
+                        { q: "4. The restaurant was closed. This was disappointing.", acceptable: ["the restaurant was closed which was disappointing"], explanation: "💡 <strong>Explanation:</strong> Replace 'This' with <strong>'which'</strong>." },
+                        { q: "5. They arrived two hours late. This caused a lot of problems.", acceptable: ["they arrived two hours late which caused a lot of problems"], explanation: "💡 <strong>Explanation:</strong> Replace 'This' with <strong>'which'</strong>." },
+                        { q: "6. My brother got a scholarship. This was fantastic news.", acceptable: ["my brother got a scholarship which was fantastic news"], explanation: "💡 <strong>Explanation:</strong> Replace 'This' with <strong>'which'</strong>." },
+                        { q: "7. She quit her job suddenly. This surprised everyone.", acceptable: ["she quit her job suddenly which surprised everyone"], explanation: "💡 <strong>Explanation:</strong> Replace 'This' with <strong>'which'</strong>." },
+                        { q: "8. We finished the project early. This was a great achievement.", acceptable: ["we finished the project early which was a great achievement"], explanation: "💡 <strong>Explanation:</strong> Replace 'This' with <strong>'which'</strong>." },
+                        { q: "9. He didn't follow the instructions. This caused several mistakes.", acceptable: ["he didn't follow the instructions which caused several mistakes"], explanation: "💡 <strong>Explanation:</strong> Replace 'This' with <strong>'which'</strong>." },
+                        { q: "10. They cancelled the outdoor event. This meant we had to stay inside.", acceptable: ["they cancelled the outdoor event which meant we had to stay inside"], explanation: "💡 <strong>Explanation:</strong> Replace 'This' with <strong>'which'</strong>." }
+                    ]
+                }
+            ]
+        },
+        {
+            id: "lesson5",
+            name: "Lesson 5: Unit 9A – Contrast and Exception (30 Items using the 6 Core Expressions)",
+            desc: "Practice while, unlike, in contrast to, except that, except for, and except for the fact that.",
+            exercises: [
+                {
+                    type: "mcq",
+                    title: "Exercise 1: Multiple Choice (Using the 6 Core Expressions)",
+                    instruction: "Instruction: Choose the correct expression based on the table rules (Clauses take while, except that, except for the fact that; Nouns take unlike, in contrast to, except for).",
+                    sample: { 
+                        q: "Sample: [CHOICE] traditional classrooms, online classes let students study remotely.", 
+                        options: ["Unlike", "While", "Except that"], 
+                        answer: "Unlike", 
+                        explanation: "💡 <strong>Why?</strong> Followed by a noun phrase ('traditional classrooms'), requiring <strong>'Unlike'</strong>." 
+                    },
+                    questions: [
+                        { q: "1. [CHOICE] some students enjoy studying alone, others prefer group work.", options: ["While", "Unlike", "Except for"], ans: "While", explanation: "💡 <strong>Explanation:</strong> Followed by a full clause (subject + verb), so <strong>'While'</strong> is correct." },
+                        { q: "2. [CHOICE] traditional classrooms, online classes allow students to study from anywhere.", options: ["Unlike", "While", "Except that"], ans: "Unlike", explanation: "💡 <strong>Explanation:</strong> Comparing noun phrases ('traditional classrooms'), requiring <strong>'Unlike'</strong>." },
+                        { q: "3. The two restaurants are similar [CHOICE] one is much more expensive.", options: ["except that", "unlike", "except for"], ans: "except that", explanation: "💡 <strong>Explanation:</strong> Followed by a clause ('one is much more expensive'), requiring <strong>'except that'</strong>." },
+                        { q: "4. [CHOICE] the expensive tuition fees, the university offers many useful facilities.", options: ["In contrast to", "While", "Except that"], ans: "In contrast to", explanation: "💡 <strong>Explanation:</strong> Followed by a noun phrase ('the expensive tuition fees'), requiring <strong>'In contrast to'</strong>." },
+                        { q: "5. The school has excellent facilities [CHOICE] its inconvenient location.", options: ["except for", "except that", "while"], ans: "except for", explanation: "💡 <strong>Explanation:</strong> Followed by a noun phrase ('its inconvenient location'), requiring <strong>'except for'</strong>." },
+                        { q: "6. The city is usually quiet, [CHOICE] it gets busy during the festival.", options: ["except for the fact that", "unlike", "except for"], ans: "except for the fact that", explanation: "💡 <strong>Explanation:</strong> Followed by a full clause ('it gets busy...'), requiring <strong>'except for the fact that'</strong>." },
+                        { q: "7. [CHOICE] his brother, who loves sports, Mark prefers playing video games.", options: ["Unlike", "While", "Except that"], ans: "Unlike", explanation: "💡 <strong>Explanation:</strong> Followed by noun phrase 'his brother'." },
+                        { q: "8. Both computers are fast, [CHOICE] the second one has more storage.", options: ["except that", "unlike", "except for"], ans: "except that", explanation: "💡 <strong>Explanation:</strong> Followed by clause ('the second one has...')." },
+                        { q: "9. [CHOICE] the heavy rain, all students arrived on time.", options: ["In contrast to", "While", "Except that"], ans: "In contrast to", explanation: "💡 <strong>Explanation:</strong> Followed by noun phrase 'the heavy rain'." },
+                        { q: "10. Anna loves traveling abroad, [CHOICE] her sister prefers staying home.", options: ["while", "unlike", "except for"], ans: "while", explanation: "💡 <strong>Explanation:</strong> Contrasting two clauses." }
+                    ]
+                },
+                {
+                    type: "dropdown",
+                    title: "Exercise 2: Fill in the Blank",
+                    instruction: "Instruction: Select the correct contrast or exception expression from the dropdown menu.",
+                    questions: [
+                        { q: "1. [DROPDOWN] traditional classrooms, online classes can be attended from almost anywhere.", options: ["-- select --", "Unlike", "While", "Except that"], ans: "Unlike" },
+                        { q: "2. [DROPDOWN] some students prefer working in groups, others prefer working alone.", options: ["-- select --", "While", "Unlike", "Except for"], ans: "While" },
+                        { q: "3. The two restaurants are quite similar, [DROPDOWN] one is much more expensive.", options: ["-- select --", "except that", "unlike", "except for"], ans: "except that" },
+                        { q: "4. The school has excellent facilities, [DROPDOWN] its inconvenient location.", options: ["-- select --", "except for", "while", "except that"], ans: "except for" },
+                        { q: "5. The two countries have many similarities, [DROPDOWN] they have different education systems.", options: ["-- select --", "except that", "unlike", "except for"], ans: "except that" },
+                        { q: "6. The city is usually quiet, [DROPDOWN] it gets busy during the festival.", options: ["-- select --", "except for the fact that", "unlike", "except for"], ans: "except for the fact that" },
+                        { q: "7. [DROPDOWN] his brother, who loves sports, Mark prefers playing video games.", options: ["-- select --", "Unlike", "While", "Except that"], ans: "Unlike" },
+                        { q: "8. The laptop works perfectly, [DROPDOWN] the battery drains a bit quickly.", options: ["-- select --", "except that", "unlike", "except for"], ans: "except that" },
+                        { q: "9. [DROPDOWN] traditional learning, online learning provides flexible schedules.", options: ["-- select --", "In contrast to", "While", "Except that"], ans: "In contrast to" },
+                        { q: "10. Both candidates are qualified, [DROPDOWN] the first applicant has more field experience.", options: ["-- select --", "except that", "unlike", "except for"], ans: "except that" }
+                    ]
+                },
+                {
+                    type: "writing",
+                    title: "Exercise 3: Rewrite Sentences Using the 6 Core Expressions",
+                    instruction: "Instruction: Rewrite the sentence incorporating the requested contrast tool in brackets.",
+                    sample: { 
+                        q: "Sample: The city is usually quiet, but it gets busy during the festival. (except that)", 
+                        answer: "The city is usually quiet, except that it gets busy during the festival", 
+                        explanation: "💡 <strong>Why?</strong> Connects the two ideas using the exception clause <strong>'except that'</strong>." 
+                    },
+                    questions: [
+                        { q: "1. Online classes are more flexible than traditional classes. (unlike)", acceptable: ["unlike traditional classes online classes are more flexible"], explanation: "💡 <strong>Explanation:</strong> Use <strong>'Unlike'</strong> before noun phrase." },
+                        { q: "2. Some students enjoy group work, but others prefer working alone. (while)", acceptable: ["while some students enjoy group work others prefer working alone"], explanation: "💡 <strong>Explanation:</strong> Start with <strong>'While'</strong> for contrasting clauses." },
+                        { q: "3. The two brothers are very similar, but one is much more outgoing. (except that)", acceptable: ["the two brothers are very similar except that one is much more outgoing"], explanation: "💡 <strong>Explanation:</strong> Use <strong>'except that'</strong> + clause." },
+                        { q: "4. The school has excellent facilities, but its location is inconvenient. (except for)", acceptable: ["the school has excellent facilities except for its inconvenient location", "the school has excellent facilities except for its location"], explanation: "💡 <strong>Explanation:</strong> Use <strong>'except for'</strong> + noun phrase." },
+                        { q: "5. Japanese people generally travel more by train than Americans. (in contrast to)", acceptable: ["in contrast to americans japanese people generally travel more by train"], explanation: "💡 <strong>Explanation:</strong> Use <strong>'In contrast to'</strong> + noun phrase." },
+                        { q: "6. The restaurant is quite popular, but it is very small. (except for the fact that)", acceptable: ["the restaurant is quite popular except for the fact that it is very small"], explanation: "💡 <strong>Explanation:</strong> Use <strong>'except for the fact that' + clause</strong>." },
+                        { q: "7. The city is usually quiet, but it gets busy during the festival. (except that)", acceptable: ["the city is usually quiet except that it gets busy during the festival"], explanation: "💡 <strong>Explanation:</strong> Use <strong>'except that'</strong>." },
+                        { q: "8. Both computers are fast, but the second one has more storage. (except for the fact that)", acceptable: ["both computers are fast except for the fact that the second one has more storage"], explanation: "💡 <strong>Explanation:</strong> Use <strong>'except for the fact that'</strong>." },
+                        { q: "9. Anna loves traveling abroad, but her sister prefers staying home. (while)", acceptable: ["while anna loves traveling abroad her sister prefers staying home"], explanation: "💡 <strong>Explanation:</strong> Use <strong>'While'</strong>." },
+                        { q: "10. The new smartphone is expensive, but it has an amazing camera. (except for)", acceptable: ["the new smartphone is expensive except for its amazing camera"], explanation: "💡 <strong>Explanation:</strong> Use <strong>'except for'</strong> + noun phrase." }
+                    ]
+                }
+            ]
+        },
+        {
+            id: "lesson6",
+            name: "Lesson 6: Unit 9B – Past Habits with Used to and Would (20 Items)",
+            desc: "Practice past habits and states using 'used to' and 'would' with fixed, unambiguous answers.",
+            exercises: [
+                {
+                    type: "mcq",
+                    title: "Exercise 1: Choose Used to or Would (Fixed Answers)",
+                    instruction: "Instruction: <strong>Rule:</strong> Past states (*live, be, have, like*) require <strong>used to</strong> (*would* cannot be used for states). Specific past actions with explicit trigger words (*Every Sunday, Whenever*) use **would**.",
+                    sample: { 
+                        q: "Sample: My grandfather (used to / would) live in a small village before moving to the city.", 
+                        options: ["used to", "would"], 
+                        answer: "used to", 
+                        explanation: "💡 <strong>Why?</strong> 'Live' is a past state, so only <strong>'used to'</strong> is grammatically correct ('would' cannot describe states)." 
+                    },
+                    questions: [
+                        { q: "1. My family (used to / would) not live in the city. We lived in the countryside.", options: ["used to", "would"], ans: "used to", explanation: "💡 <strong>Explanation:</strong> Negative past state ('live') requires <strong>'used to'</strong>." },
+                        { q: "2. Every Sunday, my father (used to / would) take us to the market.", options: ["used to", "would"], ans: "would", explanation: "💡 <strong>Explanation:</strong> Specific repeated action triggered by 'Every Sunday' takes <strong>'would'</strong>." },
+                        { q: "3. I (used to / would) not like vegetables when I was younger.", options: ["used to", "would"], ans: "used to", explanation: "💡 <strong>Explanation:</strong> State of mind ('like') requires <strong>'used to'</strong>." },
+                        { q: "4. Whenever we visited our grandmother, she (used to / would) bake us cookies.", options: ["used to", "would"], ans: "would", explanation: "💡 <strong>Explanation:</strong> Repeated action triggered by 'Whenever' takes <strong>'would'</strong>." },
+                        { q: "5. My brother (used to / would) not have a smartphone in high school.", options: ["used to", "would"], ans: "used to", explanation: "💡 <strong>Explanation:</strong> Past possession state ('have') requires <strong>'used to'</strong>." },
+                        { q: "6. Every winter, we (used to / would) travel to the mountains for vacation.", options: ["used to", "would"], ans: "would", explanation: "💡 <strong>Explanation:</strong> Specific recurring winter routine takes <strong>'would'</strong>." },
+                        { q: "7. She (used to / would) be very shy when she was a little girl.", options: ["used to", "would"], ans: "used to", explanation: "💡 <strong>Explanation:</strong> Past state of being ('be') requires <strong>'used to'</strong>." },
+                        { q: "8. Every Saturday morning, my grandfather (used to / would) read the newspaper in the garden.", options: ["used to", "would"], ans: "would", explanation: "💡 <strong>Explanation:</strong> Specific recurring routine ('Every Saturday morning') takes <strong>'would'</strong>." },
+                        { q: "9. We (used to / would) own a small house near the beach.", options: ["used to", "would"], ans: "used to", explanation: "💡 <strong>Explanation:</strong> Past ownership state ('own') requires <strong>'used to'</strong>." },
+                        { q: "10. Every evening after dinner, my mother (used to / would) tell us fascinating stories.", options: ["used to", "would"], ans: "would", explanation: "💡 <strong>Explanation:</strong> Specific recurring evening routine takes <strong>'would'</strong>." }
+                    ]
+                },
+                {
+                    type: "writing",
+                    title: "Exercise 2: Complete the Paragraph (Fixed Answers)",
+                    instruction: "Instruction: Fill in the blank with the single correct form ('used to' for states/negative habits, 'would' for specific recurring actions).",
+                    sample: { 
+                        q: "Sample: During our school days, my friends and I would study together at the local library every weekend.", 
+                        answer: "would", 
+                        explanation: "💡 <strong>Why?</strong> Describes a repeated past action with a routine trigger." 
+                    },
+                    questions: [
+                        { q: "1. When I was in primary school, my family (1) ____________ live in a small wooden house.", acceptable: ["used to"], explanation: "💡 <strong>Explanation:</strong> 'Live' is a past state, requiring <strong>'used to'</strong>." },
+                        { q: "2. We (2) ____________ not have a television back then.", acceptable: ["didn't use to", "used to"], explanation: "💡 <strong>Explanation:</strong> Negative state requires <strong>'didn\'t use to'</strong>." },
+                        { q: "3. Every single evening, my grandfather (3) ____________ tell us amazing folk tales by candlelight.", acceptable: ["would"], explanation: "💡 <strong>Explanation:</strong> Specific recurring routine ('Every single evening') takes <strong>'would'</strong>." },
+                        { q: "4. I (4) ____________ be afraid of the dark when I was little.", acceptable: ["used to"], explanation: "💡 <strong>Explanation:</strong> State of feeling ('be afraid') requires <strong>'used to'</strong>." },
+                        { q: "5. Whenever the weather was nice, we (5) ____________ play outside until sunset.", acceptable: ["would"], explanation: "💡 <strong>Explanation:</strong> Triggered recurring action ('Whenever...') takes <strong>'would'</strong>." },
+                        { q: "6. My parents (6) ____________ own a bicycle, so they walked everywhere.", acceptable: ["didn't use to", "used to"], explanation: "💡 <strong>Explanation:</strong> Negative past possession state requires <strong>'didn\'t use to'</strong>." },
+                        { q: "7. Every Sunday morning, my father (7) ____________ take me to the local market.", acceptable: ["would"], explanation: "💡 <strong>Explanation:</strong> Specific recurring routine ('Every Sunday morning') takes <strong>'would'</strong>." },
+                        { q: "8. I (8) ____________ not like eating vegetables as a kid.", acceptable: ["didn't use to", "used to"], explanation: "💡 <strong>Explanation:</strong> Negative state of mind ('like') requires <strong>'didn\'t use to'</strong>." },
+                        { q: "9. During summer breaks, my cousins (9) ____________ visit us every week.", acceptable: ["would"], explanation: "💡 <strong>Explanation:</strong> Recurring summer routine takes <strong>'would'</strong>." },
+                        { q: "10. Looking back, those (10) ____________ be the happiest days of my life.", acceptable: ["used to"], explanation: "💡 <strong>Explanation:</strong> Past state of being ('be') requires <strong>'used to'</strong>." }
+                    ]
+                }
+            ]
+        }
+    ];
+
+    let activeUnitData = null;
+
+    function initMainMenu() {
+        const grid = document.getElementById('unit-cards-grid');
+        grid.innerHTML = '';
+
+        grammarDatabase.forEach((unit, idx) => {
+            const card = document.createElement('div');
+            card.className = 'selection-card';
+            card.onclick = () => loadUnitExercises(idx);
+            card.innerHTML = `
+                <div class="card-icon-wrap">📚</div>
+                <h3>${unit.name}</h3>
+                <p>${unit.desc}</p>
+            `;
+            grid.appendChild(card);
+        });
+    }
+
+    function navigateTo(screenId) {
+        document.querySelectorAll('.screen').forEach(s => s.classList.add('hidden'));
+        document.getElementById(`screen-${screenId}`).classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function loadUnitExercises(unitIdx) {
+        const unit = grammarDatabase[unitIdx];
+        activeUnitData = unit;
+        document.getElementById('exercise-screen-title').innerText = unit.name;
+        
+        const banner = document.getElementById('score-banner');
+        banner.style.display = 'none';
+        banner.innerText = '';
+
+        const container = document.getElementById('exercise-questions-container');
+        container.innerHTML = '';
+
+        let globalQCounter = 0;
+
+        unit.exercises.forEach((exe) => {
+            const card = document.createElement('div');
+            card.className = 'question-card';
+
+            const titleEl = document.createElement('h4');
+            titleEl.style.color = 'var(--primary)';
+            titleEl.style.margin = '0 0 6px 0';
+            titleEl.style.fontSize = '16px';
+            titleEl.innerText = exe.title;
+            card.appendChild(titleEl);
+
+            const instr = document.createElement('p');
+            instr.style.fontWeight = '700';
+            instr.style.color = 'var(--text-light)';
+            instr.style.fontSize = '13px';
+            instr.style.marginTop = '0';
+            instr.innerText = exe.instruction;
+            card.appendChild(instr);
+
+            if (exe.sample) {
+                const sampleDiv = document.createElement('div');
+                sampleDiv.className = 'sample-box';
+                sampleDiv.innerHTML = `<strong>💡 Example:</strong><br>${exe.sample.q}<br><em>Answer:</em> <strong>${exe.sample.answer}</strong><br>${exe.sample.explanation}`;
+                card.appendChild(sampleDiv);
+            }
+
+            exe.questions.forEach((qObj) => {
+                globalQCounter++;
+                const qDiv = document.createElement('div');
+                qDiv.className = 'question-text';
+                qDiv.style.margin = '14px 0';
+                qDiv.style.borderTop = '1px solid var(--border-color)';
+                qDiv.style.paddingTop = '12px';
+
+                if (exe.type === 'writing') {
+                    qDiv.innerHTML = qObj.q + `<br><input type="text" class="exercise-input" data-type="writing" data-q-index="${globalQCounter - 1}" placeholder="Type answer here...">`;
+                } else if (exe.type === 'dropdown') {
+                    let selectHtml = `<select class="exercise-select" data-type="dropdown" data-q-index="${globalQCounter - 1}">`;
+                    qObj.options.forEach(opt => {
+                        selectHtml += `<option value="${opt}">${opt}</option>`;
+                    });
+                    selectHtml += `</select>`;
+                    qDiv.innerHTML = qObj.q.replace('[DROPDOWN]', selectHtml);
+                } else if (exe.type === 'mcq') {
+                    let renderedQ = qObj.q.replace('[CHOICE]', '_____');
+                    qDiv.innerHTML = renderedQ;
+                    
+                    const optionsContainer = document.createElement('div');
+                    optionsContainer.className = 'mcq-options';
+                    optionsContainer.dataset.type = 'mcq';
+                    optionsContainer.dataset.qIndex = globalQCounter - 1;
+                    
+                    qObj.options.forEach(opt => {
+                        const optBtn = document.createElement('button');
+                        optBtn.className = 'mcq-option-btn';
+                        optBtn.innerText = opt;
+                        optBtn.type = 'button';
+                        optBtn.onclick = () => {
+                            optionsContainer.querySelectorAll('.mcq-option-btn').forEach(b => b.classList.remove('selected'));
+                            optBtn.classList.add('selected');
+                            optionsContainer.dataset.selectedVal = opt;
+                        };
+                        optionsContainer.appendChild(optBtn);
+                    });
+                    qDiv.appendChild(optionsContainer);
+                }
+
+                const fb = document.createElement('div');
+                fb.id = `fb_q_${globalQCounter - 1}`;
+                fb.className = 'feedback-text';
+                qDiv.appendChild(fb);
+
+                card.appendChild(qDiv);
+            });
+
+            container.appendChild(card);
+        });
+
+        const submitWrap = document.createElement('div');
+        submitWrap.className = 'submit-btn-wrap';
+        submitWrap.innerHTML = `<button class="btn-primary" onclick="submitUnitAnswers()">Submit Lesson Answers 🎯</button>`;
+        container.appendChild(submitWrap);
+
+        navigateTo('exercise');
+    }
+
+    function submitUnitAnswers() {
+        if (!activeUnitData) return;
+
+        let totalQuestions = 0;
+        let score = 0;
+        let globalIdx = 0;
+
+        activeUnitData.exercises.forEach(exe => {
+            exe.questions.forEach(qObj => {
+                totalQuestions++;
+                const fbEl = document.getElementById(`fb_q_${globalIdx}`);
+                
+                if (exe.type === 'writing') {
+                    const inputEl = document.querySelector(`input[data-q-index="${globalIdx}"]`);
+                    const userVal = inputEl ? inputEl.value : "";
+                    
+                    let cleanedUserVal = userVal.trim().toLowerCase();
+                    cleanedUserVal = cleanedUserVal.replace(/[.?!]+$/, '').trim();
+
+                    let isMatch = false;
+                    for (let acc of qObj.acceptable) {
+                        let cleanedAcc = acc.trim().toLowerCase();
+                        cleanedAcc = cleanedAcc.replace(/[.?!]+$/, '').trim();
+                        if (cleanedUserVal === cleanedAcc) {
+                            isMatch = true;
+                            break;
+                        }
+                    }
+
+                    if (isMatch) {
+                        score++;
+                        fbEl.innerHTML = `✓ Correct! ${qObj.explanation}`;
+                        fbEl.className = "feedback-text correct-fb";
+                    } else {
+                        fbEl.innerHTML = `✗ Incorrect. Correct answer: <strong>${qObj.acceptable[0]}</strong>. ${qObj.explanation}`;
+                        fbEl.className = "feedback-text incorrect-fb";
+                    }
+                } else if (exe.type === 'dropdown') {
+                    const selectEl = document.querySelector(`select[data-q-index="${globalIdx}"]`);
+                    const userVal = selectEl ? selectEl.value : "";
+
+                    if (userVal === qObj.ans) {
+                        score++;
+                        fbEl.innerHTML = `✓ Correct! ${qObj.explanation}`;
+                        fbEl.className = "feedback-text correct-fb";
+                    } else {
+                        fbEl.innerHTML = `✗ Incorrect. Correct answer: <strong>${qObj.ans}</strong>. ${qObj.explanation}`;
+                        fbEl.className = "feedback-text incorrect-fb";
+                    }
+                } else if (exe.type === 'mcq') {
+                    const containerEl = document.querySelector(`div.mcq-options[data-q-index="${globalIdx}"]`);
+                    const userVal = containerEl ? containerEl.dataset.selectedVal : null;
+                    const buttons = containerEl ? containerEl.querySelectorAll('.mcq-option-btn') : [];
+
+                    buttons.forEach(b => {
+                        if (b.innerText === qObj.ans) {
+                            b.classList.add('selected-correct');
+                        } else if (b.innerText === userVal && userVal !== qObj.ans) {
+                            b.classList.add('selected-incorrect');
+                        }
+                    });
+
+                    if (userVal === qObj.ans) {
+                        score++;
+                        fbEl.innerHTML = `✓ Correct! ${qObj.explanation}`;
+                        fbEl.className = "feedback-text correct-fb";
+                    } else {
+                        fbEl.innerHTML = `✗ Incorrect. Correct answer: <strong>${qObj.ans}</strong>. ${qObj.explanation}`;
+                        fbEl.className = "feedback-text incorrect-fb";
+                    }
+                }
+
+                globalIdx++;
+            });
+        });
+
+        const banner = document.getElementById('score-banner');
+        banner.style.display = 'block';
+        banner.innerHTML = `✨ You got ${score} / ${totalQuestions}! ✨`;
+
+        document.querySelector('.exercise-wrapper').scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.onload = initMainMenu;
+</script>
+
+</body>
+</html>
